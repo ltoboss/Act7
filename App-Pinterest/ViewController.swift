@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         btn.layer.masksToBounds = true
         btn.layer.cornerRadius = 6
         btn.translatesAutoresizingMaskIntoConstraints = false
-        //btn.addTarget(self, action: #selector(nex), for: <#T##UIControl.Event#>)
+        btn.addTarget(self, action: #selector(signin_call), for: .touchUpInside)
         return btn
     }()
     
@@ -114,5 +114,11 @@ class ViewController: UIViewController {
         txt.textColor =  UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         return txt
     }()
+    
+    @objc func signin_call(){
+        let lto = signin()
+        present(lto,animated: true,completion: nil)
+        //self.navigationController?.pushViewController(signin(), animated: true)
+    }
 }
 

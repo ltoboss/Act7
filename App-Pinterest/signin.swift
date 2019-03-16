@@ -1,5 +1,5 @@
 //
-//  age.swift
+//  signin.swift
 //  App-Pinterest
 //
 //  Created by Sarahí Ramírez Omaña on 3/15/19.
@@ -8,21 +8,21 @@
 
 import UIKit
 
-class age: UIViewController {
-    
-    var email:String = ""
-    var pass:String  = ""
-    
+class signin: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red:255/255, green:255/255, blue:255/255, alpha:1)
-
-        txtAge.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
-        txtAge.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        txtAge.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
         
-        inputValues.topAnchor.constraint(equalTo: txtAge.topAnchor, constant: 50).isActive = true
+        view.addSubview(txtEmail)
+        view.addSubview(inputValues)
+        view.addSubview(btnNext)
+        
+        txtEmail.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        txtEmail.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        txtEmail.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -10).isActive = true
+        
+        inputValues.topAnchor.constraint(equalTo: txtEmail.topAnchor, constant: 50).isActive = true
         inputValues.heightAnchor.constraint(equalToConstant: 100).isActive = true
         inputValues.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
         
@@ -32,10 +32,11 @@ class age: UIViewController {
         btnNext.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
     }
     
-    let txtAge: UILabel = {
+    
+    let txtEmail: UILabel = {
         let txt = UILabel()
         txt.translatesAutoresizingMaskIntoConstraints = false
-        txt.text = "Introduce tu edad"
+        txt.text = "Introduce tu correo electrónico"
         txt.textAlignment = .left
         txt.textColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha:1)
         txt.font = UIFont(name:"fontname", size: 3.0)
@@ -45,29 +46,33 @@ class age: UIViewController {
     let inputValues: UITextField = {
         let txt = UITextField()
         txt.translatesAutoresizingMaskIntoConstraints = false
-        txt.placeholder = "Edad"
+        txt.placeholder = "E-mail"
         txt.font = .systemFont(ofSize: 56)
+        //let pding: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
+        //txt.leftView = pding
         txt.leftViewMode = .always
         return txt
     }()
     
     let btnNext: UIButton = {
         let btn = UIButton()
+        
         btn.backgroundColor = UIColor.init(red: 230/255, green: 0/255, blue: 35/255, alpha: 1)
-        btn.setTitle("Registrar", for: .normal)
+        btn.setTitle("Continuar", for: .normal)
         btn.layer.cornerRadius = 6
         btn.layer.masksToBounds = true
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(new_user), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(password_call), for: .touchUpInside)
+        
         return btn
     }()
     
-    @objc func new_user(){
-        let lto = age()
-        lto.email = self.email
-        lto.pass = inputValues.text!
+    
+    @objc func password_call(){
+        let lto = password()
+        lto.email = inputValues.text!
         present(lto,animated: true,completion: nil)
         //self.navigationController?.pushViewController(signin(), animated: true)
     }
-    
 }
+

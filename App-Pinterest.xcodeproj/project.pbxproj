@@ -14,6 +14,9 @@
 		BA9ABF81223B86CA00813DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9ABF7F223B86CA00813DA3 /* LaunchScreen.storyboard */; };
 		BA9ABF8C223B86CA00813DA3 /* App_PinterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ABF8B223B86CA00813DA3 /* App_PinterestTests.swift */; };
 		BA9ABF97223B86CA00813DA3 /* App_PinterestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ABF96223B86CA00813DA3 /* App_PinterestUITests.swift */; };
+		BA9ABFA5223BA45000813DA3 /* signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ABFA4223BA45000813DA3 /* signin.swift */; };
+		BA9ABFA7223C837500813DA3 /* password.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ABFA6223C837500813DA3 /* password.swift */; };
+		BA9ABFA9223C895100813DA3 /* age.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9ABFA8223C895100813DA3 /* age.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BA9ABF92223B86CA00813DA3 /* App-PinterestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-PinterestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9ABF96223B86CA00813DA3 /* App_PinterestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_PinterestUITests.swift; sourceTree = "<group>"; };
 		BA9ABF98223B86CA00813DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA9ABFA4223BA45000813DA3 /* signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signin.swift; sourceTree = "<group>"; };
+		BA9ABFA6223C837500813DA3 /* password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = password.swift; sourceTree = "<group>"; };
+		BA9ABFA8223C895100813DA3 /* age.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = age.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,13 @@
 			children = (
 				BA9ABF76223B86C600813DA3 /* AppDelegate.swift */,
 				BA9ABF78223B86C600813DA3 /* ViewController.swift */,
+				BA9ABFA4223BA45000813DA3 /* signin.swift */,
 				BA9ABF7A223B86C600813DA3 /* Main.storyboard */,
 				BA9ABF7D223B86CA00813DA3 /* Assets.xcassets */,
 				BA9ABF7F223B86CA00813DA3 /* LaunchScreen.storyboard */,
 				BA9ABF82223B86CA00813DA3 /* Info.plist */,
+				BA9ABFA6223C837500813DA3 /* password.swift */,
+				BA9ABFA8223C895100813DA3 /* age.swift */,
 			);
 			path = "App-Pinterest";
 			sourceTree = "<group>";
@@ -256,6 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9ABFA7223C837500813DA3 /* password.swift in Sources */,
+				BA9ABFA9223C895100813DA3 /* age.swift in Sources */,
+				BA9ABFA5223BA45000813DA3 /* signin.swift in Sources */,
 				BA9ABF79223B86C600813DA3 /* ViewController.swift in Sources */,
 				BA9ABF77223B86C600813DA3 /* AppDelegate.swift in Sources */,
 			);
