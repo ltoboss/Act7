@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class age: UIViewController {
     
@@ -63,11 +64,19 @@ class age: UIViewController {
     }()
     
     @objc func new_user(){
-        let lto = age()
-        lto.email = self.email
-        lto.pass = inputValues.text!
-        present(lto,animated: true,completion: nil)
-        //self.navigationController?.pushViewController(signin(), animated: true)
+        
+        if let age = inputValues.text{
+            
+            Auth.auth().createUser(withEmail: email, password: pass) { (authResult, error) in
+                if error != nil{
+                    print(error)
+                }
+                guard let email = authResult?.user.email, error == nil else {
+                    return
+                }
+                print("\(email) created")
+            }
     }
     
+}
 }
